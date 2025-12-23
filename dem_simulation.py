@@ -25,11 +25,9 @@ class DEMSimulation:
         self.particles = []
         
         # Contact parameters
-        self.k_n = 1000.0  # Normal stiffness
-        self.k_t = 800.0   # Tangential stiffness
+        self.k_n = 1000.0  # Normal stiffness (N/m)
         self.damping = 0.3  # Damping coefficient
-        self.friction = 0.5  # Friction coefficient
-        self.restitution = 0.8  # Coefficient of restitution
+        self.restitution = 0.8  # Coefficient of restitution for boundary collisions
     
     def add_particle(self, particle):
         """Add a particle to the simulation"""

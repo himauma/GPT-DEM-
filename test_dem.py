@@ -38,7 +38,8 @@ def test_particle_update():
     p.add_force(10.0, 0)  # 10N force on 1kg mass = 10 m/s^2
     dt = 0.1
     p.update(dt)
-    # After 0.1s with 10 m/s^2 acceleration: v = 1 m/s, x = 0.05 m
+    # After 0.1s with 10 m/s^2 acceleration: v = a*dt = 10*0.1 = 1 m/s
+    # position = v*dt = 1*0.1 = 0.1 m (Euler method: x = x + v*dt where v is updated first)
     assert abs(p.velocity[0] - 1.0) < 0.001
     assert abs(p.position[0] - 0.1) < 0.001
     print("✓ Particle update test passed")
