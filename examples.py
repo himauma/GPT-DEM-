@@ -3,6 +3,7 @@ Example scenarios for DEM simulation
 Demonstrates various use cases of the DEM engine
 """
 import numpy as np
+import matplotlib.pyplot as plt
 from dem_simulation import DEMSimulation
 from visualizer import DEMVisualizer
 
@@ -153,7 +154,6 @@ def example_particle_bounce():
 if __name__ == "__main__":
     import matplotlib
     matplotlib.use('Agg')  # Use non-interactive backend for testing
-    import matplotlib.pyplot as plt
     
     print("=" * 60)
     print("DEM Simulation Examples")

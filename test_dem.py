@@ -161,7 +161,9 @@ def test_wall_collision():
         sim.step(dt=0.001)
     
     # Particle should have settled near the bottom (within radius of ground)
-    assert p.position[1] >= p.radius * 0.9  # Should be at or above ground
+    # Using a tolerance factor for numerical stability
+    GROUND_TOLERANCE = 0.9
+    assert p.position[1] >= p.radius * GROUND_TOLERANCE  # Should be at or above ground
     assert p.position[1] < 1.0  # Should have fallen from initial height
     print("✓ Wall collision test passed")
 

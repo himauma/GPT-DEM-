@@ -3,9 +3,6 @@ Main entry point for DEM simulation
 Run this file to execute the simulation
 """
 import numpy as np
-import matplotlib
-matplotlib.use('Agg')  # Use non-interactive backend
-import matplotlib.pyplot as plt
 
 from dem_simulation import DEMSimulation
 from visualizer import DEMVisualizer
@@ -15,6 +12,11 @@ def main():
     """
     Main function to run DEM simulation demonstration.
     """
+    # Set matplotlib backend for non-interactive use
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    
     print("=" * 70)
     print("GPT-DEM Simulation - Discrete Element Method")
     print("=" * 70)
